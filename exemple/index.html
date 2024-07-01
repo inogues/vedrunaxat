@@ -15,22 +15,23 @@
         <div id="chatbot-container"></div>
     </main>
     <script>
-    fetch('fcec6286-345e-4fc2-a2d6-5716226de529', {
-    method: 'POST',
-    headers: {
-        'Accept-Encoding': 'gzip, deflate',
-        'Connection': 'keep-alive',
-        'Content-Type': 'application/json',
-        'User-Agent': 'python-requests/2.28.1',
-        'accept': 'application/json',
-        'token': '<Your Botsonic token>'
-    },
-    // body: '{"question": "How to develop these skills?", "chat_history": []}',
-    body: JSON.stringify({
-        'input_text': 'How to develop these skills?',
-        'chat_id': "a uuid"
-    })
-});
-      </script>
+  (function (w, d, s, o, f, js, fjs) {
+    w["botsonic_widget"] = o;
+    w[o] =
+      w[o] ||
+      function () {
+        (w[o].q = w[o].q || []).push(arguments);
+      };
+    (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+    js.id = o;
+    js.src = f;
+    js.async = 1;
+    fjs.parentNode.insertBefore(js, fjs);
+  })(window, document, "script", "Botsonic", "https://widget.writesonic.com/CDN/botsonic.min.js");
+  Botsonic("init", {
+    serviceBaseUrl: "https://api-azure.botsonic.ai",
+    token: "c126aab1-b739-41da-b755-fb6550455af8",
+  });
+</script>
 </body>
 </html>
